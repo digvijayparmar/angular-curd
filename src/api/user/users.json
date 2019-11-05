@@ -1,0 +1,38 @@
+[
+  {"id": 1,
+    "firstName": "Beth",
+    "lastName": "Stook",
+    "workPhone": "602-223-4513",
+    "cellPhone": "402-235-9045",
+    "emailId": "bstook0@altervista.org",
+    "dateOfBirth": "2018-03-30",
+    "street": "0098 Hanover Trail",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "zipCode": "85053"
+  },
+  {"id": 2,
+    "firstName": "John",
+    "lastName": "Smith",
+    "workPhone": "602-223-0009",
+    "cellPhone": "231-235-0982",
+    "emailId": "jsmith@gmail.com",
+    "dateOfBirth": "1995-08-11",
+    "street": "2316 West Street",
+    "city": "Irving",
+    "state": "Texas",
+    "zipCode": "65209"
+  },
+  {"id": 3,
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "workPhone": "123-444-8789",
+    "cellPhone": "231-235-0982",
+    "emailId": "Jane@gmail.com",
+    "dateOfBirth": "1995-08-11",
+    "street": "2316 West Street",
+    "city": "Irving",
+    "state": "Texas",
+    "zipCode": "65209"
+  }
+  ]
