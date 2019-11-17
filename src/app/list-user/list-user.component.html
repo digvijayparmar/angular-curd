@@ -1,40 +1,56 @@
-<div class="col-md-12">
-  <h2> Address Book</h2>
-  <button class="btn btn-primary" (click)="addUser()"> Add Address</button>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th style="display:none;">Id</th>
-      <th>FirstName</th>
-      <th>LastName</th>
-      <th>Email</th>
-      <th style="width: 15%;">WorkPhone</th>
-      <th style="width: 15%;">CellPhone</th>
-      <th>DateOfBirth</th>
-      <th style="width: 25%;">Street</th>
-      <th>City</th>
-      <th>State</th>
-      <th>ZipCode</th>
-      <th style="width: 30%;">Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let address of addressbook">
-        <td style="display:none;">{{address.id}}</td>
-      <td>{{address.firstName}}</td>
-      <td>{{address.lastName}}</td>
-      <td>{{address.emailId}}</td>
-      <td>{{address.workPhone}}</td>
-      <td>{{address.cellPhone}}</td>
-      <td>{{address.dateOfBirth}}</td>
-      <td>{{address.street}}</td>
-      <td>{{address.city}}</td>
-      <td>{{address.state}}</td>
-      <td>{{address.zipCode}}</td>
 
-      <td><button class="btn btn-primary" (click)="deleteUser(address)" > Delete</button><span> | </span>
-        <button class="btn btn-primary" (click)="editUser(address)" > Edit</button></td>
-    </tr>
-    </tbody>
-  </table>
+<nav class='navbar navbar-expand navbar-dark bg-dark'>
+<a class='navbar-brand' href="#"><b>Address Book</b></a>
+  <div class="collapse navbar-collapse">
+  <ul class='nav navbar-nav'>
+    <li class ="nav-item"><a>Home</a></li>
+  </ul>
+</div>
+  <ul class='nav navbar-nav navbar-right'>
+      <li class ="nav-item active"><a style = "cursor: hand;" class='nav-link' (click)="addUser()"><b>+</b>Add a new address</a></li>
+  </ul>
+</nav>
+<div class='card'>
+  <div class='card-body'>
+
+    <div class='table-responsive'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th style="display:none;">Id</th>
+            <th style="width: 13%;">First Name</th>
+            <th style="width: 12%;">Last Name</th>
+            <th>Email</th>
+            <th style="width: 15%;">Work Phone</th>
+            <th style="width: 15%;">Cell Phone</th>
+            <th>DateOfBirth</th>
+            <th style="width: 20%;">Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZipCode</th>
+            <th style="width: 30%;">Action</th>
+ 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let address of addressbook">
+            <td style="display:none;">{{address.id}}</td>
+            <td>{{address.firstName}}</td>
+            <td>{{address.lastName}}</td>
+            <td>{{address.emailId}}</td>
+            <td>{{address.workPhone}}</td>
+            <td>{{address.cellPhone}}</td>
+            <td>{{address.dateOfBirth}}</td>
+            <td>{{address.street}}</td>
+            <td>{{address.city}}</td>
+            <td>{{address.state}}</td>
+            <td>{{address.zipCode}}</td>
+      
+            <td><button class="btn btn-outline-primary" (click)="deleteUser(address)" > Delete</button><span> | </span>
+              <button class="btn btn-outline-primary" (click)="editUser(address)" > Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

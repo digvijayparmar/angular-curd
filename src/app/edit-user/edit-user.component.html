@@ -1,58 +1,68 @@
-<div class="col-md-8">
-  <h2 class="text-center">Edit Address</h2>
-  <button class="btn-default" (click)="navigateToListView()">Back to List View</button>
-  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" ngNativeValidate>
-    <div class="form-group required">
-      <label for="email" class="control-label">Email address:</label>
-      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" required>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+<div class='card'>
+  <div class='card-header'>
+    <span style="color: #337AB7;"><b>Edit Address</b></span>
+  </div>
+
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-8'>
+
+        <div class='row form-group required'>
+          <div class='col-md-4'><label for="email" class="control-label">Email address:</label></div>
+          <div class='col-md-8'><input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" required></div>  
+        </div>
+        <div class='row form-group required'>
+          <div class='col-md-4'><label for="firstName" class="control-label">First Name:</label></div>
+          <div class='col-md-8'><input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName" required></div>
+        </div>
+        <div class='row form-group required'>
+          <div class='col-md-4'><label for="lastName" class="control-label">Last Name:</label></div>
+          <div class='col-md-8'><input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName" required></div>
+        </div>
+        <div class='row form-group'>
+          <div class='col-md-4'><label for="workPhone">Work Phone:</label></div>
+          <div class='col-md-8'><input formControlName="workPhone" placeholder="Work Phone" name="workPhone" class="form-control" id="workPhone"></div>
+        </div>
+        <div class='row form-group'>
+          <div class='col-md-4'><label for="cellPhone">Cell Phone:</label></div>
+          <div class='col-md-8'><input formControlName="cellPhone" placeholder="Cell Phone" name="cellPhone" class="form-control" id="cellPhone"></div>
+        </div>
+        <div class='row form-group'>
+          <div class='col-md-4'><label for="dateOfBirth">Date of Birth:</label></div>
+          <div class='col-md-8'> <input formControlName="dateOfBirth" placeholder="Date Of Birth" name="dateOfBirth" class="form-control" id="dateOfBirth"></div>
+        </div>
+        <div class='row form-group'>
+            <div class='col-md-4'> <label for="street">Street:</label></div>
+            <div class='col-md-8'><input formControlName="street" placeholder="street" name="street" class="form-control" id="street"></div>
+          </div>
+          <div class='row form-group'>
+              <div class='col-md-4'><label for="city">City:</label></div>
+              <div class='col-md-8'><input formControlName="city" placeholder="city" name="city" class="form-control" id="city"></div>
+            </div>
+            <div class='row form-group'>
+                <div class='col-md-4'><label for="state">State:</label></div>
+                <div class='col-md-8'><input formControlName="state" placeholder="state" name="state" class="form-control" id="state"></div>
+              </div>
+              <div class='row form-group'>
+                  <div class='col-md-4'><label for="zipCode">Zip Code:</label></div>
+                  <div class='col-md-8'><input formControlName="zipCode" placeholder="zipCode" name="zipCode" class="form-control" id="zipCode"></div>
+                </div>
+
+
+      </div>
+
     </div>
-
-    <div class="form-group required">
-      <label for="firstName" class="control-label">First Name:</label>
-      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName" required>
-    </div>
-
-    <div class="form-group required">
-      <label for="lastName" class="control-label">Last Name:</label>
-      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName" required>
-    </div>
-
-
-    <div class="form-group">
-        <label for="workPhone">Work Phone:</label>
-        <input formControlName="workPhone" placeholder="Work Phone" name="workPhone" class="form-control" id="workPhone">
-      </div>
-  
-      <div class="form-group">
-        <label for="cellPhone">Cell Phone:</label>
-        <input formControlName="cellPhone" placeholder="Cell Phone" name="cellPhone" class="form-control" id="cellPhone">
-      </div>
-  
-      <div class="form-group">
-        <label for="dateOfBirth">Date of Birth:</label>
-        <input formControlName="dateOfBirth" placeholder="dateOfBirth" name="dateOfBirth" class="form-control" id="dateOfBirth">
-      </div>
-  
-      <div class="form-group">
-        <label for="street">Street:</label>
-        <input formControlName="street" placeholder="street" name="street" class="form-control" id="street">
-      </div>
-  
-      <div class="form-group">
-        <label for="city">City:</label>
-        <input formControlName="city" placeholder="city" name="city" class="form-control" id="city">
-      </div>
-  
-      <div class="form-group">
-        <label for="state">State:</label>
-        <input formControlName="state" placeholder="state" name="state" class="form-control" id="state">
-      </div>
-  
-      <div class="form-group">
-        <label for="zipCode">Zip Code:</label>
-        <input formControlName="zipCode" placeholder="zipCode" name="zipCode" class="form-control" id="zipCode">
-      </div>
-
-    <button class="btn btn-success">Update</button>
-  </form>
+  </div>
+  <div class='card-footer'>
+      <button class='btn btn-outline-primary'
+      (click)='onSubmit()'
+      style='width:80px'>Update
+    </button><span style='width:70%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <button class='btn btn-outline-primary'
+            (click)='navigateToListView()'
+            style='width:80px'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
 </div>
